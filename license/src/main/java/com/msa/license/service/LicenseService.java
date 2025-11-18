@@ -1,7 +1,6 @@
 package com.msa.license.service;
 
 import com.msa.license.domanin.License;
-import com.msa.license.dto.LicenseRequest;
 import com.msa.license.dto.LicenseResponse;
 import com.msa.license.repository.LicenseRepository;
 import lombok.RequiredArgsConstructor;
@@ -36,13 +35,13 @@ public class LicenseService {
     }
 
     @Transactional
-    public LicenseResponse createLicense(LicenseRequest request) {
-        if(licenseRepository.existsByLicenseName(request.getLicenseName())){
+    public LicenseResponse createLicense(String licenseName) {
+        if(licenseRepository.existsByLicenseName(licenseName)) {
             throw new IllegalArgumentException("라이선스가 이미 존재합니다.");
         }
 
         License license = new License();
-        license.setLicenseName(request.getLicenseName());
+        license.setLicenseName(licenseName);
         license.setCreatedDate(java.time.LocalDate.now());
 
         License savedLicense = licenseRepository.save(license);
@@ -50,17 +49,17 @@ public class LicenseService {
     }
 
     @Transactional
-    public LicenseResponse updateLicense(Long id, LicenseRequest request) {
+    public LicenseResponse updateLicense(Long id, String licenseName) {
         License license = licenseRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("라이선스가 없습니다."));
 
-        licenseRepository.findByLicenseName(request.getLicenseName())
+        licenseRepository.findByLicenseName(licenseName)
                 .ifPresent(existing -> {
                     if(!existing.getLicenseId().equals(id)) {
                         throw new IllegalArgumentException("라이선스가 이미 있습니다.");
                     }
                 });
-        license.setLicenseName(request.getLicenseName());
+        license.setLicenseName(licenseName);
 
         License updatedLicense = licenseRepository.save(license);
         return LicenseResponse.from(updatedLicense);
