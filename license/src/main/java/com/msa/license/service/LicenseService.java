@@ -40,5 +40,41 @@ public class LicenseService {
         if(licenseRepository.existsByLicenseName(request.getLicenseName())){
             throw new IllegalArgumentException("라이선스가 이미 존재합니다.");
         }
+
+        License license = new License();
+        license.setLicenseName(request.getLicenseName());
+        license.setCreatedDate(java.time.LocalDate.now());
+
+        License savedLicense = licenseRepository.save(license);
+        return LicenseResponse.from(savedLicense);
+    }
+
+    @Transactional
+    public LicenseResponse updateLicense(Long id, LicenseRequest request) {
+        License license = licenseRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("라이선스가 없습니다."));
+
+        licenseRepository.findByLicenseName(request.getLicenseName())
+                .ifPresent(existing -> {
+                    if(!existing.getLicenseId().equals(id)) {
+                        throw new IllegalArgumentException("라이선스가 이미 있습니다.");
+                    }
+                });
+        license.setLicenseName(request.getLicenseName());
+
+        License updatedLicense = licenseRepository.save(license);
+        return LicenseResponse.from(updatedLicense);
+    }
+
+    @Transactional
+    public void deleteLicense(Long id) {
+        if(!licenseRepository.existsById(id)){
+            throw new IllegalArgumentException("라이선스가 없습니다.");
+        }
+        licenseRepository.deleteById(id);
+    }
+
+    public long count() {
+        return licenseRepository.count();
     }
 }
