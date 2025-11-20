@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521/license
-    username: license_user
-    password: license_user
+    url: jdbc:oracle:thin:@oracle:1521/license
+    username: license
+    password: license
   jpa:
     hibernate:
       ddl-auto: validate
