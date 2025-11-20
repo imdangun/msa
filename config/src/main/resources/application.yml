@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/imdangun/msa.git
+          username: imdangun
+          password: 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
+          searchPaths: /prop, /prop/{application}
+          clone-on-start: true
+
+server:
+  port: 8070

@@ -21,6 +21,21 @@ services:
       timeout: 5s
       retries: 30
       start_period: 60s
+  
+  config:
+    image: config
+    container_name: config
+    ports:
+      - 8070:8070
+    networks:
+      - oracle-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8070/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 40s      
 
   license:
     image: license
@@ -35,6 +50,8 @@ services:
           memory: 1g
     depends_on:
       oracle:
+        condition: service_healthy
+      config:
         condition: service_healthy
     restart: unless-stopped
 
