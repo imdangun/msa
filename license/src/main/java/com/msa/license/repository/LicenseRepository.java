@@ -4,10 +4,9 @@ import com.msa.license.domanin.License;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
 public interface LicenseRepository extends JpaRepository<License, Long> {
-    Optional<License> findByLicenseName(String licenseName);
-    boolean existsByLicenseName(String licenseName);
+    List<License> findByFirmId(Long firmId);
 }

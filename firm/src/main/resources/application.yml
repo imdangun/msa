@@ -1,8 +1,8 @@
 spring:
   application:
-    name: license
+    name: firm
   config:
     import: configserver:http://config:8070
 
-
-
+server:
+  port: 8081

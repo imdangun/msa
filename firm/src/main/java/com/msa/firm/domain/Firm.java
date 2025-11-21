@@ -1,22 +1,21 @@
-package com.msa.license.domanin;
+package com.msa.firm.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
-@Table(name="licenses")
-public class License {
+@Table(name="firms")
+public class Firm {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long licenseId;
-    private String licenseName;
-    @CreationTimestamp
-    private LocalDate createdDate;
     private Long firmId;
+    private String firmName;
+    @CreationTimestamp
+    private LocalDate foundedDate;
 }

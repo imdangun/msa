@@ -1,0 +1,765 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:31:54.377Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:31:54.386Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:31:54.481Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:31:54.482Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:31:55.599Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:31:55.760Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 JPA repository interface.
+2025-11-21T06:31:56.128Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:31:56.683Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:31:56.699Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:31:56.700Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:31:56.751Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2263 ms
+2025-11-21T06:31:57.127Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:31:57.135Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:31:57.348Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:31:57.364Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:31:59.714Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:31:59.723Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:31:59.811Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:31:59.812Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:32:00.719Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:32:00.835Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+2025-11-21T06:32:01.152Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:32:01.610Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:32:01.623Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:32:01.624Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:32:01.669Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1848 ms
+2025-11-21T06:32:02.046Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:32:02.052Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:32:02.220Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:32:02.240Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:32:04.549Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:32:04.554Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:32:04.643Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:32:04.643Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:32:05.465Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:32:05.584Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+2025-11-21T06:32:05.892Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:32:06.375Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:32:06.391Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:32:06.392Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:32:06.444Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1795 ms
+2025-11-21T06:32:06.816Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:32:06.821Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:32:06.982Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:32:07.001Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:32:09.565Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:32:09.571Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:32:09.640Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:32:09.640Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:32:10.579Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:32:11.043Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 427 ms. Found 1 JPA repository interface.
+2025-11-21T06:32:12.149Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:32:13.718Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:32:13.763Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:32:13.765Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:32:13.919Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4269 ms
+2025-11-21T06:32:14.860Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:32:14.865Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:32:15.091Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:32:15.120Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:32:18.108Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:32:18.116Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:32:18.191Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:32:18.191Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:32:19.038Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:32:19.147Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interface.
+2025-11-21T06:32:19.475Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:32:20.038Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:32:20.065Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:32:20.065Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:32:20.154Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1959 ms
+2025-11-21T06:32:20.568Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:32:20.572Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:32:20.780Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:32:20.813Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:32:24.685Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:32:24.690Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:32:24.763Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:32:24.763Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:32:25.749Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:32:25.857Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2025-11-21T06:32:26.194Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:32:26.742Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:32:26.759Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:32:26.760Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:32:26.807Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2039 ms
+2025-11-21T06:32:27.214Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:32:27.220Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:32:27.408Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:32:27.431Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:32:32.856Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:32:32.862Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:32:32.937Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:32:32.937Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:32:33.903Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:32:34.017Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interface.
+2025-11-21T06:32:34.314Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:32:34.773Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:32:34.788Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:32:34.789Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:32:34.845Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1903 ms
+2025-11-21T06:32:35.180Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:32:35.187Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:32:35.385Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:32:35.405Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:32:44.255Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:32:44.264Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:32:44.340Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:32:44.340Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:32:45.210Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:32:45.323Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interface.
+2025-11-21T06:32:45.638Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:32:46.150Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:32:46.169Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:32:46.169Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:32:46.228Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1883 ms
+2025-11-21T06:32:46.572Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:32:46.576Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:32:46.774Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:32:46.799Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:33:02.081Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:33:02.085Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:33:02.151Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:33:02.151Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:33:02.989Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:33:03.104Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interface.
+2025-11-21T06:33:03.461Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:33:03.961Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:33:03.972Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:33:03.972Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:33:04.018Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1860 ms
+2025-11-21T06:33:04.340Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:33:04.346Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:33:04.556Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:33:04.578Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:33:32.389Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:33:32.394Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:33:32.477Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:33:32.478Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:33:33.547Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:33:33.662Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+2025-11-21T06:33:34.029Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:33:34.519Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:33:34.535Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:33:34.535Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:33:34.581Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2097 ms
+2025-11-21T06:33:34.947Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:33:34.953Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:33:35.138Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:33:35.156Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:34:28.533Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:34:28.537Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:34:28.639Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:34:28.639Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:34:29.469Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:34:29.587Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
+2025-11-21T06:34:29.873Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:34:30.339Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:34:30.350Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:34:30.351Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:34:30.396Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1752 ms
+2025-11-21T06:34:30.752Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:34:30.757Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:34:30.905Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:34:30.933Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:35:33.182Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:35:33.186Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:35:33.266Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:35:33.267Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:35:34.129Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:35:34.243Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+2025-11-21T06:35:34.601Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:35:35.135Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:35:35.164Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:35:35.165Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:35:35.214Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1940 ms
+2025-11-21T06:35:35.596Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:35:35.600Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:35:35.778Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:35:35.798Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:36:37.988Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:36:37.997Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:36:38.076Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:36:38.076Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:36:38.972Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:36:39.083Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2025-11-21T06:36:39.398Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:36:39.883Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:36:39.895Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:36:39.895Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:36:39.942Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1859 ms
+2025-11-21T06:36:40.279Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:36:40.284Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:36:40.439Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:36:40.456Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:37:42.607Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:37:42.611Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:37:42.677Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:37:42.677Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:37:43.562Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:37:43.669Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2025-11-21T06:37:43.985Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:37:44.454Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:37:44.465Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:37:44.465Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:37:44.508Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1826 ms
+2025-11-21T06:37:44.860Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:37:44.865Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:37:45.085Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:37:45.104Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:38:49.084Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:38:49.090Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:38:49.200Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:38:49.201Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:38:50.720Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:38:50.924Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 184 ms. Found 1 JPA repository interface.
+2025-11-21T06:38:51.499Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:38:52.230Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:38:52.248Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:38:52.248Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:38:52.303Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3093 ms
+2025-11-21T06:38:52.816Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:38:52.825Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:38:53.133Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:38:53.165Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:39:56.723Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:39:56.731Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:39:56.845Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:39:56.846Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:39:58.394Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:39:58.580Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 1 JPA repository interface.
+2025-11-21T06:39:59.067Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:39:59.870Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:39:59.895Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:39:59.895Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:39:59.949Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3096 ms
+2025-11-21T06:40:00.493Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:40:00.501Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:40:00.746Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:40:00.772Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-21T06:41:03.176Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : Starting FirmApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 1 (/app/BOOT-INF/classes started by root in /app)
+2025-11-21T06:41:03.181Z  INFO 1 --- [firm] [           main] com.msa.firm.FirmApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T06:41:03.260Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config:8070
+2025-11-21T06:41:03.260Z  INFO 1 --- [firm] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=firm, profiles=[default], label=null, version=87c896bd2a397bc15175e4f6f8288375f8947c3d, state=
+2025-11-21T06:41:04.101Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T06:41:04.213Z  INFO 1 --- [firm] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2025-11-21T06:41:04.517Z  INFO 1 --- [firm] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3b6a7fe-1b40-3f1d-a2b7-08351156a5f5
+2025-11-21T06:41:05.022Z  INFO 1 --- [firm] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-11-21T06:41:05.040Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T06:41:05.041Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-21T06:41:05.095Z  INFO 1 --- [firm] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1829 ms
+2025-11-21T06:41:05.545Z  WARN 1 --- [firm] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-11-21T06:41:05.552Z  INFO 1 --- [firm] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-21T06:41:05.807Z  INFO 1 --- [firm] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-21T06:41:05.836Z ERROR 1 --- [firm] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
