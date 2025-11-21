@@ -35,7 +35,22 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
-      start_period: 40s      
+      start_period: 40s
+
+  eureka:
+    image: eureka
+    container_name: eureka
+    ports:
+      - 8071:8071
+    networks:
+      - oracle-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8071/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
 
   license:
     image: license
